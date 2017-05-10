@@ -1,0 +1,27 @@
+Quiz 1-2:
+Why we use F1-score instead of precision(accuracy)?
+Ans:
+F1-score considers both the precision and the recall (or called Sensitivity or the True Positive Rate) of the test to compute the score.
+
+Why don’t we use binary classification function as the activation function in neural networks?
+Ans:
+It can't handle multiple "true" answers and probability representation of the answers.
+
+What is the bias and variance of a machine learning algorithm?
+Ans:
+Bias is related to assumptions of the learning algorithms while variance is the noise or fluctuations in the training set.
+
+When training a single tree in random forest, the tree is never pruned, why?
+Ans:
+Pruning is required in decision trees to avoid overfitting. However, in random forest, the overfitting is mitigated by the reason that samples used to train the individual trees are "bootstrapped." Second.
+
+What is one-hot encoding?
+Ans:
+It transforms n categorical features to n vectors composed by [1, 0]. The sum within each vector is 1.
+
+How to prevent overfitting in neural networks?
+Ans:
+Adjust hyperparameters by development data not test data.
+Apply dropout.
+Collect as larger data set as possible.
+
