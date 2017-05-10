@@ -41,7 +41,7 @@ def ngram_probs(filename):
                    trigram_p[trigram] += 1
 
                 for trigram in trigram_p:
-                    trigram_p[bigram] = trigram_p[bigram]/bigram_p[bigram[0]]
+                    trigram_p[trigram] = trigram_p[trigram]/bigram_p[trigram[0]]
             sentence = source_f.readline()
 
     return bigram_p, trigram_p
