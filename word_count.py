@@ -7,6 +7,9 @@ unigram_p = {}
 
 filename = 'raw_sentences.txt'
 _WORD_FILTER = re.compile("([.,!?\"':;)(])")
+
+
+def ngram_probs(filename):
 with open(filename, mode="r") as source_f:
     sentence = source_f.readline()
     while sentence:
@@ -30,6 +33,7 @@ with open(filename, mode="r") as source_f:
 
             for bigram in bigram_p:
                 bigram_p[bigram] = bigram_p[bigram]/unigram_p[bigram[0]
+
         for trigram in trigrams:
             if trigram not in trigram_p:
                trigram_p[trigram] = 1
@@ -40,3 +44,4 @@ with open(filename, mode="r") as source_f:
                 trigram_p[bigram] = trigram_p[bigram]/bigram_p[bigram[0]
         sentence = source_f.readline()
 
+    return bigram_p, trigram_p
